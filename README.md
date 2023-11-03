@@ -1,6 +1,6 @@
 # devstagram
 
-## Con Docker
+## Con Docker 🐳
 
 ### Descargar Laravel
 
@@ -10,7 +10,9 @@ Desde el wsl ejecutaremos
 curl -s https://laravel.build/devstagram | bash
 ```
 
-## Sin Docker
+---
+
+## Sin Docker 🚫🐳
 
 ### Extensiones necesarias
 
