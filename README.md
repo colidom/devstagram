@@ -46,6 +46,12 @@ A partir de ahora podremos acceder desde Windows a http://localhost para acceder
 
 ## Sin Docker 🚫🐳
 
+### Crear app Laravel
+
+```
+composer create-project laravel/laravel devstagram
+```
+
 ### Extensiones necesarias
 
 ```
