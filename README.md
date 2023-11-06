@@ -10,8 +10,6 @@ Desde el wsl ejecutaremos
 curl -s https://laravel.build/devstagram | bash
 ```
 
-
-
 **Problemas comunes**
 
 Si ya tenemos mysql instalado en la máquina, el contenedor nos va a dar problemas con el puerto 3306, debemos cambiarlo en el docker-compose.yml por 3307 por ejemplo y eliminar el contenedor de mysql, parar el servicio y volver a crearlo, mediante los comanos:
@@ -25,6 +23,16 @@ Iniciamos nuevamente el contenedor y debería pillarnos la nueva configuración 
 ```
 docker-compose up -d
 ```
+
+#### Arrancar el servidor desde WSL
+
+`cd` a /devstagram$ y ejecutaremos el comando:
+
+```./vendor/bin/sail up
+
+```
+
+A partir de ahora podremos acceder desde Windows a http://localhost para acceder al servidor web con nuestra app Laravel.
 
 ---
 
