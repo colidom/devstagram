@@ -26,15 +26,18 @@ docker-compose up -d
 
 #### Arrancar servicios desde WSL
 
-`cd` a /devstagram$ y ejecutaremos el comando:
+`cd` a /devstagram y ejecutaremos el comando:
 
-```./vendor/bin/sail up
+```
+./vendor/bin/sail up
 ```
 
 #### Parar servicios desde WSL
-`cd` a /devstagram$ y ejecutaremos el comando:
 
-```./vendor/bin/sail down
+`cd` a /devstagram y ejecutaremos el comando:
+
+```
+./vendor/bin/sail down
 ```
 
 A partir de ahora podremos acceder desde Windows a http://localhost para acceder al servidor web de desarrollo con nuestra app Laravel.
