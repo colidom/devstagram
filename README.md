@@ -32,7 +32,7 @@ docker-compose up -d
 
 ```
 
-A partir de ahora podremos acceder desde Windows a http://localhost para acceder al servidor web con nuestra app Laravel.
+A partir de ahora podremos acceder desde Windows a http://localhost para acceder al servidor web de desarrollo con nuestra app Laravel.
 
 ---
 
