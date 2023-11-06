@@ -58,6 +58,12 @@ extension=openssl
 extension=pdo_mysql
 ```
 
+### Descargar dependencias (vendor)
+
+```
+composer install
+```
+
 ### Arrancar servidor
 
 ```
