@@ -24,12 +24,17 @@ Iniciamos nuevamente el contenedor y debería pillarnos la nueva configuración 
 docker-compose up -d
 ```
 
-#### Arrancar el servidor desde WSL
+#### Arrancar servicios desde WSL
 
 `cd` a /devstagram$ y ejecutaremos el comando:
 
 ```./vendor/bin/sail up
+```
 
+#### Parar servicios desde WSL
+`cd` a /devstagram$ y ejecutaremos el comando:
+
+```./vendor/bin/sail down
 ```
 
 A partir de ahora podremos acceder desde Windows a http://localhost para acceder al servidor web de desarrollo con nuestra app Laravel.
