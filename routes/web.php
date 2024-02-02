@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('principal');
 });
 
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
 Route::get('/crear-cuenta', function () {
     return view('auth.register');
 });

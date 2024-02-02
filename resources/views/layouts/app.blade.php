@@ -11,9 +11,9 @@
 <body class="bg-gray-100">
     <header class="p-5 border-b bg-white shadow">
         <div class="container mx-auto flex justify-between">
-            <h1 class="text-3xl font-black">DevStagram</h1>
+            <a class="text-3xl font-black" href="/">DevStagram</a>
             <nav class="flex gap-2 items-center">
-                <a class="font-bold uppercase text-gray-600" href="#">Login</a>
+                <a class="font-bold uppercase text-gray-600" href="/login">Login</a>
                 <a class="font-bold uppercase text-gray-600" href="/crear-cuenta">Crear cuenta</a>
             </nav>
         </div>
