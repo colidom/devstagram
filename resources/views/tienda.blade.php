@@ -18,7 +18,7 @@
         <a href="/nosotros">Nosotros</a>
         <a href="/tienda">Tienda</a>
     </nav>
-    <h1>Nosotros</h1>
+    <h1>Tienda</h1>
     </body>
 
 </html>
