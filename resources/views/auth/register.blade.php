@@ -65,7 +65,7 @@
                     </label>
                     <input id="password_confirmation" name="password_confirmation" type="password"
                         placeholder="Tu contraseña de registro" class="border p-3 w-full rounded-lg" />
-                    @error('password')
+                    @error('password_confirmation')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
                             {{ $message }}
                         </p>
