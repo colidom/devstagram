@@ -6,8 +6,12 @@ use App\Http\Controllers\Controller;
 
 class RegisterController extends Controller
 {
-    function index()
+    public function index()
     {
         return view('auth.register');
+    }
+    public function store()
+    {
+        dd('Post...');
     }
 }

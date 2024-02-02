@@ -24,3 +24,4 @@ Route::get('/login', [LoginController::class, 'index']);
 
 // Register
 Route::get('/crear-cuenta', [RegisterController::class, 'index']);
+Route::post('/crear-cuenta', [RegisterController::class, 'store']);
