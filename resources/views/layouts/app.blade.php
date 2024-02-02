@@ -2,8 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Devstagram - @yield('titulo')</title>
     @vite('resources/css/app.css')
 </head>
@@ -14,17 +14,20 @@
             <a class="text-3xl font-black" href="/">DevStagram</a>
             <nav class="flex gap-2 items-center">
                 <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="/login">Login</a>
-                <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="{{ route('register') }}">Crear cuenta</a>
+                <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="{{ route('register') }}">Crear
+                    cuenta</a>
             </nav>
         </div>
     </header>
 
     <main class="container mx-auto mt-10">
-        <h2 class="font-black text-center text-3xl mb-10">@yield('titulo')</h2>
+        <h2 class="font-black text-center text-3xl mb-10">
+            @yield('titulo')
+        </h2>
         @yield('contenido')
     </main>
-    <footer class=" mt-10 text-center p-5 text-gray-500 font-bold">
-        DevStagram · Todos los derechos reservados · {{now()->year}}
+    <footer class="mt-10 text-center p-5 text-gray-500 font-bold">
+        DevStagram · Todos los derechos reservados · {{ now()->year }}
     </footer>
 </body>
 
