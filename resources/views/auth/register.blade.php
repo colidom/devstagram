@@ -44,7 +44,7 @@ Regístrate en DevStagram
                 <input id="password_confirmation" name="password_confirmation" type="password" placeholder="Tu contraseña de registro" class="border p-3 w-full rounded-lg">
             </div>
 
-            <input type="submit" value="Crear cuenta" class="bg-sky-600 hover:bg-sky-700 cursor-progress uppercase font-bold w-full  '-3 text-white rounded-lg">
+            <input type="submit" value="Crear cuenta" class="bg-sky-600 hover:bg-sky-700 cursor-pointer uppercase font-bold w-full  '-3 text-white rounded-lg">
         </form>
     </div>
 </div>
