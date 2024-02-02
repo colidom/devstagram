@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +19,8 @@ Route::get('/', function () {
     return view('principal');
 });
 
-Route::get('/login', function () {
-    return view('auth.login');
-});
+// Login
+Route::get('/login', [LoginController::class, 'index']);
 
-Route::get('/crear-cuenta', function () {
-    return view('auth.register');
-});
+// Register
+Route::get('/crear-cuenta', [RegisterController::class, 'index']);
