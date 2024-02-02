@@ -28,7 +28,8 @@
                         Nombre de usuario
                     </label>
                     <input id="username" name="username" type="text" placeholder="Tu nombre de usuario"
-                        class="border p-3 w-full rounded-lg" />
+                        class="border p-3 w-full rounded-lg @error('username') border-red-500 @enderror"
+                        value="{{ old('username') }}" />
                     @error('username')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
                             {{ $message }}
@@ -40,7 +41,8 @@
                         Email
                     </label>
                     <input id="email" name="email" type="text" placeholder="Tu email de registro"
-                        class="border p-3 w-full rounded-lg" />
+                        class="border p-3 w-full rounded-lg @error('email') border-red-500 @enderror"
+                        value="{{ old('email') }}" />
                     @error('email')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
                             {{ $message }}
@@ -52,7 +54,7 @@
                         Contraseña
                     </label>
                     <input id="password" name="password" type="password" placeholder="Tu contraseña de registro"
-                        class="border p-3 w-full rounded-lg" />
+                        class="border p-3 w-full rounded-lg @error('password') border-red-500 @enderror" />
                     @error('password')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
                             {{ $message }}
@@ -64,7 +66,8 @@
                         Repetir Contraseña
                     </label>
                     <input id="password_confirmation" name="password_confirmation" type="password"
-                        placeholder="Tu contraseña de registro" class="border p-3 w-full rounded-lg" />
+                        placeholder="Tu contraseña de registro"
+                        class="border p-3 w-full rounded-lg @error('password_confirmation') border-red-500 @enderror" />
                     @error('password_confirmation')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
                             {{ $message }}
