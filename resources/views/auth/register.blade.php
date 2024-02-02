@@ -29,6 +29,11 @@
                     </label>
                     <input id="username" name="username" type="text" placeholder="Tu nombre de usuario"
                         class="border p-3 w-full rounded-lg" />
+                    @error('username')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                            {{ $message }}
+                        </p>
+                    @enderror
                 </div>
                 <div class="mb-5">
                     <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">
@@ -36,6 +41,11 @@
                     </label>
                     <input id="email" name="email" type="text" placeholder="Tu email de registro"
                         class="border p-3 w-full rounded-lg" />
+                    @error('email')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                            {{ $message }}
+                        </p>
+                    @enderror
                 </div>
                 <div class="mb-5">
                     <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">
@@ -43,6 +53,11 @@
                     </label>
                     <input id="password" name="password" type="password" placeholder="Tu contraseña de registro"
                         class="border p-3 w-full rounded-lg" />
+                    @error('password')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                            {{ $message }}
+                        </p>
+                    @enderror
                 </div>
                 <div class="mb-5">
                     <label for="password_confirmation" class="mb-2 block uppercase text-gray-500 font-bold">
@@ -50,6 +65,11 @@
                     </label>
                     <input id="password_confirmation" name="password_confirmation" type="password"
                         placeholder="Tu contraseña de registro" class="border p-3 w-full rounded-lg" />
+                    @error('password')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                            {{ $message }}
+                        </p>
+                    @enderror
                 </div>
 
                 <input type="submit" value="Crear cuenta"
