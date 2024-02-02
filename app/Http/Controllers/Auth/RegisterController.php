@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class RegisterController extends Controller
@@ -10,8 +11,8 @@ class RegisterController extends Controller
     {
         return view('auth.register');
     }
-    public function store()
+    public function store(Request $request)
     {
-        dd('Post...');
+        dd($request);
     }
 }
