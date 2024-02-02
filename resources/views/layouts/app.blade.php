@@ -14,7 +14,7 @@
             <a class="text-3xl font-black" href="/">DevStagram</a>
             <nav class="flex gap-2 items-center">
                 <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="/login">Login</a>
-                <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href=" /crear-cuenta">Crear cuenta</a>
+                <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="{{ route('register') }}">Crear cuenta</a>
             </nav>
         </div>
     </header>
