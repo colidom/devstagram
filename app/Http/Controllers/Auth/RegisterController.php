@@ -13,6 +13,10 @@ class RegisterController extends Controller
     }
     public function store(Request $request)
     {
-        dd($request);
+        //dd($request);
+        //Validaciones
+        $this->validate($request, [
+            'name' => ['required', 'max:30']
+        ]);
     }
 }
