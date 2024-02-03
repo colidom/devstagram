@@ -35,6 +35,6 @@ class RegisterController extends Controller
             'password' => $request->password
         ]);
 
-        // Redireccionar
+        return redirect()->route('posts.index');
     }
 }
