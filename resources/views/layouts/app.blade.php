@@ -26,7 +26,7 @@
                     <a class="font-bold text-gray-600 hover:text-gray-500" href="{{ route('posts.index') }}">
                         Hola: <span class="font-normal">{{ auth()->user()->username }}</span>
                     </a>
-                    <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="{{ route('login') }}">
+                    <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="{{ route('logout') }}">
                         Cerrar sesion
                     </a>
                 @endauth
