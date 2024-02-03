@@ -29,5 +29,7 @@ class RegisterController extends Controller
             'email' => $request->email,
             'password' => $request->password
         ]);
+
+        // Redireccionar
     }
 }
