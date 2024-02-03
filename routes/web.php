@@ -20,7 +20,7 @@ use App\Http\Controllers\Auth\RegisterController;
 Route::get('/', [HomeController::class, 'index']);
 
 // Login
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 // Register
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
