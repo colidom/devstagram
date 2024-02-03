@@ -24,7 +24,7 @@
                 @endguest
                 @auth
                     <a class="font-bold text-gray-600 hover:text-gray-500"
-                        href="{{ route('posts.index', ['user' => auth()->id()]) }}" title="@lang('Ver mis posts')">
+                        href="{{ route('posts.index', ['user' => auth()->id()]) }}">
                         Hola: <span class="font-normal">{{ auth()->user()->username }}</span>
                     </a>
                     <form method="POST" action="{{ route('logout') }}">
