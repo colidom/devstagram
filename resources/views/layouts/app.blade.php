@@ -26,9 +26,12 @@
                     <a class="font-bold text-gray-600 hover:text-gray-500" href="{{ route('posts.index') }}">
                         Hola: <span class="font-normal">{{ auth()->user()->username }}</span>
                     </a>
-                    <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="{{ route('logout') }}">
-                        Cerrar sesion
-                    </a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="font-bold uppercase text-gray-600 hover:text-gray-500">
+                            Cerrar sesion
+                        </button>
+                    </form>
                 @endauth
             </nav>
         </div>
