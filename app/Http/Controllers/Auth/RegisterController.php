@@ -35,11 +35,14 @@ class RegisterController extends Controller
             'password' => $request->password
         ]);
 
-        // Autenticar usuario
-        auth()->attempt([
+        // Otra forma de autenticar
+        /*         auth()->attempt([
             'email' => $request->email,
             'password' => $request->password,
-        ]);
+        ]); */
+
+        // Autenticar usuario
+        auth()->attempt($request->only('email', 'password'));
 
         return redirect()->route('posts.index');
     }
