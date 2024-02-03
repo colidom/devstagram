@@ -11,6 +11,12 @@
             <form method="POST" action="{{ route('login') }}">
                 @csrf
 
+                @if (session('mesaggeErr'))
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                        {{ session('mesaggeErr') }}
+                    </p>
+                @endif
+
                 <div class="mb-5">
                     <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">
                         Email
