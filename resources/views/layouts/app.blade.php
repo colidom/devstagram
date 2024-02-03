@@ -14,14 +14,6 @@
             <a class="text-3xl font-black" href="/">DevStagram</a>
 
             <nav class="flex gap-2 items-center">
-                @guest
-                    <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="{{ route('login') }}">
-                        Login
-                    </a>
-                    <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="{{ route('register') }}">
-                        Registrarse
-                    </a>
-                @endguest
                 @auth
                     <a class="font-bold text-gray-600 hover:text-gray-500"
                         href="{{ route('posts.index', auth()->user()->username) }}">
@@ -34,6 +26,15 @@
                         </button>
                     </form>
                 @endauth
+
+                @guest
+                    <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="{{ route('login') }}">
+                        Login
+                    </a>
+                    <a class="font-bold uppercase text-gray-600 hover:text-gray-500" href="{{ route('register') }}">
+                        Registrarse
+                    </a>
+                @endguest
             </nav>
         </div>
     </header>
