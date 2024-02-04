@@ -13,6 +13,7 @@
             <form action="{{ route('imagenes.store') }}" method="POST" enctype="multipart/form-data" id="dropzone"
                 class="dropzone border-dash border-2
             w-full h-96 rounded flex flex-col  justify-center items-center">
+                @csrf
             </form>
         </div>
 
