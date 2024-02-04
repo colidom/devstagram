@@ -15,7 +15,7 @@ class LoginController extends Controller
 
     public function store(Request $request)
     {
-        //Validaciones
+        // Validaciones
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required'
@@ -23,7 +23,7 @@ class LoginController extends Controller
 
         if (!auth()->attempt($request->only('email', 'password'), $request->remember)) {
             return back()
-                ->withErrors(['email' => 'Credenciales incorrectas'])
+                ->withErrors(['login' => 'Email y/o contraseña incorrectos'])
                 ->withInput();
         }
 

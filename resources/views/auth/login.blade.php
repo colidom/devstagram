@@ -10,31 +10,35 @@
         <div class="md:w-4/12 bg-white p-6 rounded-lg shadow-xl">
             <form method="POST" action="{{ route('login') }}">
                 @csrf
-
+                @if ($errors->has('login'))
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                        {{ $errors->first('login') }}
+                    </p>
+                @endif
                 <div class="mb-5">
                     <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">
                         Email
                     </label>
                     <input id="email" name="email" type="email" placeholder="Tu email de registro"
-                        class="border p-3 w-full rounded-lg @error('email') border-red-500 @enderror"
+                        class="border p-3 w-full rounded-lg @if ($errors->has('login') || $errors->has('email')) border-red-500 @endif"
                         value="{{ old('email') }}" />
-                    @error('email')
+                    @if ($errors->has('email'))
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
                             {{ $message }}
                         </p>
-                    @enderror
+                    @endif
                 </div>
                 <div class="mb-5">
                     <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">
                         Contraseña
                     </label>
                     <input id="password" name="password" type="password" placeholder="Tu contraseña de registro"
-                        class="border p-3 w-full rounded-lg @error('password') border-red-500 @enderror" />
-                    @error('password')
+                        class="border p-3 w-full rounded-lg @if ($errors->has('login') || $errors->has('password')) border-red-500 @endif" />
+                    @if ($errors->has('password'))
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
                             {{ $message }}
                         </p>
-                    @enderror
+                    @endif
                 </div>
 
                 <div class="mb-5">
