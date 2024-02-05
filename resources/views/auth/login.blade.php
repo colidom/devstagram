@@ -3,7 +3,7 @@
 @endsection
 @section('contenido')
     <div class="md:flex md:justify-center md:gap-10 md:items-center">
-        <div class="md:w-6/12 p-5">
+        <div class="md:w-6/12 bg-white p-3 rounded-md shadow-md">
             <img class="rounded-sm" src="{{ asset('img/login.jpg') }}" alt="Imagen login usuarios" />
         </div>
 
@@ -16,10 +16,7 @@
                     </p>
                 @endif
                 <div class="mb-5">
-                    <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">
-                        Email
-                    </label>
-                    <input id="email" name="email" type="email" placeholder="Tu email de registro"
+                    <input id="email" name="email" type="email" placeholder="Email"
                         class="border p-3 w-full rounded-lg @if ($errors->has('login') || $errors->has('email')) border-red-500 @endif"
                         value="{{ old('email') }}" />
                     @if ($errors->has('email'))
@@ -29,10 +26,7 @@
                     @endif
                 </div>
                 <div class="mb-5">
-                    <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">
-                        Contraseña
-                    </label>
-                    <input id="password" name="password" type="password" placeholder="Tu contraseña de registro"
+                    <input id="password" name="password" type="password" placeholder="Contraseña"
                         class="border p-3 w-full rounded-lg @if ($errors->has('login') || $errors->has('password')) border-red-500 @endif" />
                     @if ($errors->has('password'))
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
