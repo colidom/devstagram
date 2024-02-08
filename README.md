@@ -87,3 +87,15 @@ php artisan migrate
 ```
 php artisan migrate:rollback
 ```
+
+#### Para hacer uso de los factory
+
+```
+php artisan tinker
+```
+
+##### Crear la factoria para insertar registros en DB
+
+```
+App\Models\Post::factory()->times(50)->create();
+```
