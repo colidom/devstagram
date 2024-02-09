@@ -20,8 +20,18 @@ class PostController extends Controller
         ]);
     }
 
+    // Método que renderiza vista del formulario (GET)
     public function create()
     {
         return view('posts.create');
+    }
+
+    // Método que almacena en db
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'titulo' => 'required|max:255',
+            'descripcion' => 'required'
+        ]);
     }
 }
