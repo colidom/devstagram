@@ -8,8 +8,11 @@ use App\Models\User;
 
 class LoginController extends Controller
 {
-    function index()
+    public function index()
     {
+        if (auth()->check()) {
+            return redirect()->route('posts.index', ['user' => auth()->user()->username]);
+        }
         return view('auth.login');
     }
 
