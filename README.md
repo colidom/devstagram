@@ -94,7 +94,7 @@ php artisan migrate:rollback
 php artisan tinker
 ```
 
-##### Crear la factoria para insertar registros en DB
+##### Crear la factoria para insertar registros en Base de Datos
 
 ```
 App\Models\Post::factory()->times(50)->create();
