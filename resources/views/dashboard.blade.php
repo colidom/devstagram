@@ -39,8 +39,8 @@
                         </a>
                     </div>
                 @endforeach
-
             </div>
+            <div class="">{{ $posts->links('pagination::tailwind') }}</div>
         @else
             <div class="text-gray-600 uppercase text-sm text-center font-bold">Aún no se ha publicado ningún post</div>
         @endif
