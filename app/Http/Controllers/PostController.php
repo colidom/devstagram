@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    // Definir la constante a nivel de clase
+    const ELEMENTS_BY_PAGE = 20;
+
     public function __construct()
     {
         // Para proteger la ruta y el controlador
@@ -16,7 +19,7 @@ class PostController extends Controller
 
     public function index(User $user)
     {
-        $posts = Post::where('user_id', $user->id)->paginate(5);
+        $posts = Post::where('user_id', $user->id)->paginate(self::ELEMENTS_BY_PAGE);
 
         return view('dashboard', [
             'user' => $user,
