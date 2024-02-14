@@ -19,11 +19,11 @@ class PostController extends Controller
 
     public function index(User $user)
     {
-        $posts = Post::where('user_id', $user->id)->paginate(self::ELEMENTS_BY_PAGE);
+        $userPosts = Post::where('user_id', $user->id)->paginate(self::ELEMENTS_BY_PAGE);
 
         return view('dashboard', [
             'user' => $user,
-            'posts' => $posts
+            'userPosts' => $userPosts
         ]);
     }
 
