@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     @stack('styles')
     @vite('resources/css/app.css')
-    <link rel="icon" href="{{ asset('img/devstagram.png') }}" type="image/x-icon" />
+    <link rel="icon" href="{{ url('img/devstagram.png') }}" type="image/x-icon" />
     <title>Devstagram - @yield('titulo')</title>
     @vite('resources/js/app.js')
 </head>
