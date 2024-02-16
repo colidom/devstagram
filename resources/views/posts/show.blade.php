@@ -19,6 +19,24 @@
                 <p class="mt-5">{{ $post->descripcion }}</p>
             </div>
         </div>
-        <div class="md:w-1/2">2</div>
+        <div class="md:w-1/2 p-5">
+            <div class="shadow bg-white p-5 mb-5">
+                <p class="text-xl font-bold text-center mb-4">Comentar</p>
+                <form action="">
+                    <label for="descripcion" class="mb-2 block uppercase text-gray-500 font-bold">
+                        Añade un comentario
+                    </label>
+                    <textarea id="comentario" name="comentario" placeholder="Comentario"
+                        class="border p-3 w-full rounded-lg @error('comentario') border-red-500 @enderror"></textarea>
+                    @error('comentario')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                    <input type="submit" value="Comentar"
+                        class="bg-sky-600 hover:bg-sky-700 cursor-pointer uppercase font-bold w-full '-3 text-white rounded-lg" />
+                </form>
+            </div>
+        </div>
     </div>
 @endsection
