@@ -14,7 +14,7 @@ class PostController extends Controller
     public function __construct()
     {
         // Para proteger la ruta y el controlador
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['show', 'index']);
     }
 
     public function index(User $user)
