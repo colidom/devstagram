@@ -34,7 +34,7 @@
                         </p>
                     @enderror
                     <input type="submit" value="Comentar"
-                        class="bg-sky-600 hover:bg-sky-700 cursor-pointer uppercase font-bold w-full '-3 text-white rounded-lg" />
+                        class="bg-sky-600 hover:bg-sky-700 cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg" />
                 </form>
             </div>
         </div>
