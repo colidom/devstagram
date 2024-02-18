@@ -23,6 +23,13 @@
             <div class="shadow bg-white p-5 mb-5">
                 @auth()
                     <p class="text-xl font-bold text-center mb-4">Comentar</p>
+
+                    @if (session('mensaje'))
+                        <div class="bg-green-500 p-2 rounded-lg mb-6 text-white text-center font-bold">
+                            {{ session('mensaje') }}
+                        </div>
+                    @endif
+
                     <form action="{{ route('posts.show', ['post' => $post, 'user' => $user]) }}" method="POST">
                         @csrf
                         <label for="descripcion" class="mb-2 block uppercase text-gray-500 font-bold">
