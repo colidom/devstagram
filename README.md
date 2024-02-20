@@ -99,3 +99,12 @@ php artisan tinker
 ```
 App\Models\Post::factory()->times(50)->create();
 ```
+
+##### Creación de Policy
+
+`Permite al usuario, ver, actualizar, modificar un registro de DB.`
+_--model=Post Asocia el policy al modelo Post_
+
+```
+php artisan make:policy PostPolicy --model=Post
+```
