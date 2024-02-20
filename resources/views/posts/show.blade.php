@@ -41,7 +41,9 @@
                     @endif
 
                 @endauth
-                <p>0 Likes</p>
+                <p class="font-bold">{{ $post->likes->count() }}
+                    <span class="font-normal">Me gusta</span>
+                </p>
             </div>
 
             <div class="p-3">
