@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ComentarioController;
-use App\Http\Controllers\ImagenController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,9 @@ Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.
 
 // Comentarios
 Route::post('/{user:username}/posts/{post}', [ComentarioController::class, 'store'])->name('comentarios.store');
+
+// Like a los post
+Route::post('//posts/{post}/likes', [LikeController::class, 'store'])->name('posts.likes.store');
 
 // Subida imagen
 Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.store');
