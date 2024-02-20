@@ -58,7 +58,9 @@
         <h2 class="font-black text-center text-3xl mb-10">
             @yield('titulo')
         </h2>
-        @yield('contenido')
+        <div class="ml-10 mr-10">
+            @yield('contenido')
+        </div>
     </main>
     <footer class="mt-10 text-center p-5 text-gray-500 font-bold">
         DevStagram · Todos los derechos reservados · {{ now()->year }}
