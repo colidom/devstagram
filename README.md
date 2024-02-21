@@ -76,6 +76,14 @@ composer install
 php artisan serve
 ```
 
+### Arrancar Vite
+
+Asset Bundling de Laravel, es necesario ejecutarlo para que construya nuestro front
+
+```
+npm run dev
+```
+
 ### Aplicar migraciones
 
 ```
