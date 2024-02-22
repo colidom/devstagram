@@ -116,3 +116,15 @@ _--model=Post Asocia el policy al modelo Post_
 ```
 php artisan make:policy PostPolicy --model=Post
 ```
+
+#### Mostrar las rutas del proyecto
+
+```
+php artisan route:list
+```
+
+#### Limpiar cache de las rutas del proyecto
+
+```
+php artisan route:cache
+```
