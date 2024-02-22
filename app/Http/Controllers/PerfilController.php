@@ -23,10 +23,13 @@ class PerfilController extends Controller
     public function store(Request $request)
     {
         // Modificar el request
-        $request->request->add(['username' =>  Str::slug($request->username)]);
+        $request->request->add(['username' => Str::slug($request->username)]);
 
         $this->validate($request, [
-            'username' => ['required', 'unique:users,username,' . auth()->user()->id, 'min:3', 'max:20', 'not_in:twitter,editar-perfil'],
+            'username' => [
+                'required', 'unique:users,username,' . auth()->user()->id, 'min:3', 'max:20',
+                'not_in:twitter,editar-perfil'
+            ],
         ]);
 
         if ($request->imagen) {
@@ -41,8 +44,8 @@ class PerfilController extends Controller
         // Guardar cambios
         $usuario = User::find(auth()->user()->id);
         $usuario->username = $request->username;
-        $usuario->imagen = $nombreImagen ?? '';
-        $usuario->save;
+        $usuario->imagen = $nombreImagen ?? auth()->user()->imagen ?? null;
+        $usuario->save();
 
         // Redireccionar
         return redirect()->route('posts.index', $usuario->username);
