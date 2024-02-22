@@ -35,16 +35,16 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register')
 // Logout
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
+// Perfil
+Route::get('/editar-perfil', [PerfilController::class, 'index'])->name('perfil.index');
+Route::post('/editar-perfil', [PerfilController::class, 'store'])->name('perfil.store');
+
 // Muro
 Route::get('/{user:username}', [PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/{user:username}/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
-
-// Perfil
-Route::get('/{user:username}/editar-perfil', [PerfilController::class, 'index'])->name('perfil.index');
-Route::post('/{user:username}/editar-perfil', [PerfilController::class, 'store'])->name('perfil.store');
 
 // Comentarios
 Route::post('/{user:username}/posts/{post}', [ComentarioController::class, 'store'])->name('comentarios.store');

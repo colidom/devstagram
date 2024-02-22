@@ -17,7 +17,7 @@
                     <p class="text-gray-700 text-2xl">{{ $user->username }}</p>
                     @auth
                         @if (auth()->user()->id === $user->id)
-                            <a href="{{ route('perfil.index', $user) }}" class="text-gray-600 hover:text-gray-400 cursor-pointer">
+                            <a href="{{ route('perfil.index') }}" class="text-gray-600 hover:text-gray-400 cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                     stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
