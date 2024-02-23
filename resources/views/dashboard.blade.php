@@ -8,7 +8,7 @@
     <div class="flex justify-center">
         <div class="w-full md:w-8/12 lg:w-6/12 flex flex-col items-center md:flex-row">
             <div class="w-8/12  lg:w-6/12 px-5">
-                <img src="{{ auth()->user()->imagen ? asset('perfiles/' . auth()->user()->imagen) : asset('img/usuario.svg') }}"
+                <img src="{{ $user->imagen ? asset('perfiles/' . $user->imagen) : asset('img/usuario.svg') }}"
                     alt="imagen usuario">
             </div>
             <div
@@ -36,7 +36,7 @@
                     0 <span class="font-normal">Seguidores</span>
                 </p>
                 <p class="text-gray-800 text-sm mb-3 font-bold">
-                    {{ auth()->user()->posts->count() }}
+                    {{ $user->posts->count() }}
                     <span class="font-normal">Posts</span>
                 </p>
 
