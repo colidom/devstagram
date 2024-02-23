@@ -25,7 +25,7 @@ class PerfilController extends Controller
         // Modificar el request
         $request->request->add(['username' => Str::slug($request->username)]);
 
-        $this->validate($request, [
+        $rules = [
             'username' => [
                 'required', 'unique:users,username,' . auth()->user()->id, 'min:3', 'max:20',
                 'not_in:twitter,editar-perfil'
@@ -34,7 +34,14 @@ class PerfilController extends Controller
                 'required', 'email', 'max:60',
                 'unique:users,email,' . auth()->user()->id,
             ]
-        ]);
+        ];
+
+        // Agregar reglas para la contraseña si se proporciona una nueva
+        if ($request->filled('password')) {
+            $rules['password'] = ['required', 'min:6', 'confirmed'];
+        }
+
+        $this->validate($request, $rules);
 
         if ($request->imagen) {
             $imagen = $request->file('imagen');
@@ -49,6 +56,12 @@ class PerfilController extends Controller
         $usuario = User::find(auth()->user()->id);
         $usuario->username = $request->username;
         $usuario->email = $request->email;
+
+        // Actualizar la contraseña si se proporciona una nueva
+        if ($request->filled('password')) {
+            $usuario->password = bcrypt($request->password);
+        }
+
         $usuario->imagen = $nombreImagen ?? auth()->user()->imagen ?? null;
         $usuario->save();
 
