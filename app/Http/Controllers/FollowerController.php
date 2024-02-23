@@ -8,9 +8,11 @@ class FollowerController extends Controller
 {
     public function store()
     {
+        dd("Following");
     }
 
     public function destroy()
     {
+        dd("Unfollowing");
     }
 }
