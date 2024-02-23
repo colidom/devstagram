@@ -38,7 +38,7 @@ class PerfilController extends Controller
 
         // Agregar reglas para la contraseña si se proporciona una nueva
         if ($request->filled('password')) {
-            $rules['password'] = ['required', 'min:6', 'confirmed'];
+            $rules['password'] = ['required', 'min:8', 'confirmed'];
         }
 
         $this->validate($request, $rules);
@@ -57,7 +57,7 @@ class PerfilController extends Controller
         $usuario->username = $request->username;
         $usuario->email = $request->email;
 
-        // Actualizar la contraseña si se proporciona una nueva
+        // Actualizar la contraseña solo si se proporciona una nueva
         if ($request->filled('password')) {
             $usuario->password = bcrypt($request->password);
         }
