@@ -29,8 +29,9 @@
                         @endif
                     @endauth
                 </div>
-                <p class="text-gray-800 text-sm mb-3 font-bold mt-5">
-                    0 <span class="font-normal">Siguiendo</span>
+                <p class="text-gray-800 text-sm mb-3 font-bold">
+                    {{ $user->followings->count() }}
+                    <span class="font-normal">Siguiendo</span>
                 </p>
                 <p class="text-gray-800 text-sm mb-3 font-bold">
                     {{ $user->followers->count() }}
