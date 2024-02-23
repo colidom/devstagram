@@ -30,6 +30,7 @@ class PerfilController extends Controller
                 'required', 'unique:users,username,' . auth()->user()->id, 'min:3', 'max:20',
                 'not_in:twitter,editar-perfil'
             ],
+            'email' => 'required|unique:users|email|max:60'
         ]);
 
         if ($request->imagen) {
@@ -44,6 +45,7 @@ class PerfilController extends Controller
         // Guardar cambios
         $usuario = User::find(auth()->user()->id);
         $usuario->username = $request->username;
+        $usuario->email = $request->email;
         $usuario->imagen = $nombreImagen ?? auth()->user()->imagen ?? null;
         $usuario->save();
 
