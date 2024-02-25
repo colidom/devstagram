@@ -19,7 +19,7 @@ class HomeController extends Controller
         $posts = Post::whereIn('user_id', $idsFollowins)->paginate(self::ELEMENTS_BY_PAGE);
 
         return view('home', [
-            'posts', $posts
+            'posts' => $posts
         ]);
     }
 }

@@ -2,5 +2,9 @@
     Página principal
 @endsection
 @section('contenido')
-    Contenido de esta página
+    @if ($posts->count())
+        <p>Si hay posts</p>
+    @else
+        <p>No hay posts</p>
+    @endif
 @endsection
