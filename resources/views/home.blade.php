@@ -3,8 +3,19 @@
 @endsection
 @section('contenido')
     @if ($posts->count())
-        <p>Si hay posts</p>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1">
+            @foreach ($posts as $post)
+                <div>
+                    <a href="{{ route('posts.show', ['post' => $post, 'user' => $post->user]) }}">
+                        <img class="w-full " src="{{ asset('uploads') . '/' . $post->imagen }}"
+                            alt="Imagen del post {{ $post->titulo }}">
+                    </a>
+                </div>
+            @endforeach
+        </div>
+        <div class="my-10">{{ $posts->links('pagination::tailwind') }}</div>
     @else
-        <p>No hay posts</p>
+        <h1 class="text-center">No existen publicaciones, sigue a alguien para mostrar sus publicaciones</h1>
     @endif
+
 @endsection
