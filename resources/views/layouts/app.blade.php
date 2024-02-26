@@ -9,6 +9,7 @@
     <link rel="icon" href="{{ url('img/devstagram.png') }}" type="image/x-icon" />
     <title>Devstagram - @yield('titulo')</title>
     @vite('resources/js/app.js')
+    @livewireStyles
 </head>
 
 <body class="bg-gray-100">
@@ -65,6 +66,7 @@
     <footer class="mt-10 text-center p-5 text-gray-500 font-bold">
         DevStagram · Todos los derechos reservados · {{ now()->year }}
     </footer>
+    @livewireScripts
 </body>
 
 </html>

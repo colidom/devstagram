@@ -22,6 +22,9 @@
 
             <div class="p-3 flex items-center gap-4">
                 @auth
+
+                    <livewire:like-post />
+
                     @if ($post->checkLike(auth()->user()))
                         <form method="POST" action="{{ route('posts.likes.destroy', $post) }}">
                             @method('DELETE')
