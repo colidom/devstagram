@@ -1,6 +1,9 @@
-@extends('layouts.app') @section('titulo')
+@extends('layouts.app')
+
+@section('titulo')
     Regístrate en DevStagram
 @endsection
+
 @section('contenido')
     <div class="md:flex md:justify-center md:gap-10 md:items-center">
         <div class="md:w-6/12 bg-white p-3 rounded-md shadow-md">
@@ -21,7 +24,7 @@
                         value="{{ old('email') }}" />
                     @if ($errors->has('email'))
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
-                            {{ $message }}
+                            {{ $errors->first('email') }}
                         </p>
                     @endif
                 </div>
@@ -30,7 +33,7 @@
                         class="border p-3 w-full rounded-lg @if ($errors->has('login') || $errors->has('password')) border-red-500 @endif" />
                     @if ($errors->has('password'))
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
-                            {{ $message }}
+                            {{ $errors->first('password') }}
                         </p>
                     @endif
                 </div>
