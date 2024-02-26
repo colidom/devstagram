@@ -6,7 +6,7 @@
 
 @section('contenido')
     <div class="my-5">
-        <a href="{{ url()->previous() }}"
+        <a href="{{ session('previous_url', url('/')) }}"
             class="bg-sky-600 hover:bg-sky-700 uppercase font-bold text-white p-2 rounded-md inline-flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                 class="h-6 w-6 mr-2">
@@ -15,7 +15,6 @@
             Atrás
         </a>
     </div>
-
 
     <div class="container mx-auto md:flex">
         <div class="md:w-1/2">

@@ -22,6 +22,9 @@ class PostController extends Controller
     {
         $posts = Post::where('user_id', $user->id)->latest()->paginate(self::ELEMENTS_BY_PAGE);
 
+        // Informamos la url previa para poder volver a ella fácilmente incluso tras interacturar en la publicación
+        session(['previous_url' => url()->current()]);
+
         return view('dashboard', [
             'user' => $user,
             'posts' => $posts
