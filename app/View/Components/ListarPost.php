@@ -8,12 +8,15 @@ use Illuminate\View\Component;
 
 class ListarPost extends Component
 {
+    public $posts;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($posts)
     {
-        //
+        // Se llama a este constructor cuando usamos <x-listar-post />
+        $this->posts = $posts;
     }
 
     /**
