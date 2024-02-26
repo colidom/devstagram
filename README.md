@@ -128,3 +128,11 @@ php artisan route:list
 ```
 php artisan route:cache
 ```
+
+#### Crear un componente
+
+-   Se utilizan para reutilizar componentes HTML.
+
+```
+php artisan make:component ListarPost
+```
