@@ -136,3 +136,13 @@ php artisan route:cache
 ```
 php artisan make:component ListarPost
 ```
+
+#### Crear un seeder
+```
+php artisan make:seeder CategoriasSeeder
+```
+
+#### Aplicando seeder
+```
+php artisan db:seed
+```
