@@ -96,6 +96,10 @@ php artisan migrate
 php artisan migrate:rollback
 ```
 
+#### Crear link a storage
+```
+php artisan storage:link
+```
 #### Para hacer uso de los factory
 
 ```
